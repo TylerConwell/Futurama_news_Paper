@@ -3,7 +3,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /*will have to change to be the handwritting font */
   background: #0a0a0a;
   color: #f3f4f6;
 }
