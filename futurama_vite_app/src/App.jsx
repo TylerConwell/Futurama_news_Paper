@@ -1,6 +1,26 @@
+import React from 'react';
+
+// make square compoent remember it was clicked and put "x"
+// usestate to help it remember the value, and changes the click
+import { useState } from 'react';
+
 function Square({value}) {
-  return <button className="square">{value}</button>;
+  // making interactive "x" component function
+  function handleClick() {
+    console.log('click');
+  }
+
+  return (
+    <button 
+      className="square" 
+      onClick={handleClick}
+    >
+      {value}
+    </button>
+  );
 }
+
+
 
 // making a square button component, default is main function in file
 export default function Board() {
