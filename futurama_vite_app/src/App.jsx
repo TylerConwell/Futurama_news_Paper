@@ -1,3 +1,4 @@
+// now the function square that makes each button and takes in a value prop
 function Square({value}) {
   return <button className="square">{value}</button>;
 }
