@@ -4,6 +4,7 @@ import React from 'react';
 // usestate to help it remember the value, and changes the click
 import { useState } from 'react';
 
+// indicares square component can be passed a property called value
 function Square({value}) {
   // making interactive "x" component function
   function handleClick() {
