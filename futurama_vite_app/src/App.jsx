@@ -5,10 +5,13 @@ import React from 'react';
 import { useState } from 'react';
 
 // indicares square component can be passed a property called value
-function Square({value}) {
-  // making interactive "x" component function
+function Square() {
+  // calls useState to create a value and setValue function
+  const [value, setValue] = useState(null);
+
+  // making interactive "x" component function, fill in with x when clicked
   function handleClick() {
-    console.log('click');
+    setValue('X');
   }
 
   return (
@@ -30,21 +33,21 @@ export default function Board() {
   return (
     <>
       <div className="board-row">
-        <Square value="1"/>
-        <Square value="2"/>
-        <Square value="3"/>
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
       </div>
 
       <div className="board-row">
-        <Square value="4"/>
-        <Square value="5"/>
-        <Square value="6"/>
-      </div>
-
-      <div className="board-row">
-        <Square value="7"/>
-        <Square value="8"/>
-        <Square value="9"/>
+        <Square />
+        <Square />
+        <Square />
       </div>
     </>
   );
