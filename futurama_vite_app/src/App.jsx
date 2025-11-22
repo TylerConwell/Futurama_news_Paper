@@ -28,8 +28,8 @@ function Square() {
 
 // making a square button component, default is main function in file
 export default function Board() {
-  // returning jsx for tic tac toe board
-  // and numbering the buttons 1-9
+  // returning jsx for tic tac toe board and numbering the buttons 1-9
+  // square component maintains part of game state itself
   return (
     <>
       <div className="board-row">
@@ -52,4 +52,5 @@ export default function Board() {
     </>
   );
 }
-
+// board needs to know the state of each square to determine the winner
+// store game state in board, not square what to display by passing prop
