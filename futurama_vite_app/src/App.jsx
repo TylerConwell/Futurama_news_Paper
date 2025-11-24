@@ -30,10 +30,21 @@ export default function Board() {
   // usestate declare squares state variable to store array of 9 squares
   const [squares, setSquares] = useState(Array(9).fill(null));
   // board component pass value prop to each square to render the value
+  
+  // handleclick function to update squares array when square clicked, updating the board state
+  // creates a copy of squares array, updates first element (nextsquare)
+  // to 'X', and calls setSquares to update state, re-rending the comp in square/board comp 
+  function handleClick(i) {
+    const nextSquares = squares.slice();
+    nextSquares[i] = 'X';
+    setSquares(nextSquares);
+  }
+  // not adding the i arguement and not just the hardcoded 0
+  
   return (
     <>
       <div className="board-row">
-        <Square value={squares[0]}/>
+        <Square value={squares[0]} onSquareClick={handleClick}/>
         <Square value={squares[1]}/>
         <Square value={squares[2]}/>
       </div>
