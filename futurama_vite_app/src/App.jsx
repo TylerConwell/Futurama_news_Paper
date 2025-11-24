@@ -6,24 +6,17 @@ import { useState } from 'react';
 
 // indicares square component can be passed a property called value
 // new step: receive value prop from board component
-function Square({value}) {
+function Square({value, onSquareClick}) {
   // calls useState to create a value and setValue function
-  return <button className="square">{value}</button>;
+  return (
+    <button className="square" onClick={onSquareClick}>
+      {value}
+    </button>
+  );
 
-  //const [value, setValue] = useState(null);
-  // making interactive "x" component function, fill in with x when clicked
-//   function handleClick() {
-//     setValue('X');
-//   }
-
-//   return (
-//     <button 
-//       className="square" 
-//       onClick={handleClick}
-//     >
-//       {value}
-//     </button>
-//   );
+  // change what happens whrn square clicked, board comp shows squares filled
+  // needs to update the squares array in board component, by passing it down.
+  // onsquareclick funct. square comp is called when clicked
 }
 
 
