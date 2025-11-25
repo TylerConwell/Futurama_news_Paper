@@ -5,6 +5,49 @@ import secondaryImage from './futurama_seeing_up.png';
 
 // -----------Tic Tac Toe logic-----------------
 
+// title for the tic tac toe game
+function TicTacTitle() {
+  const titleStyle = {
+    textAlign: 'center',
+    fontSize: '70px',
+    fontWeight: 'bold',
+  };
+
+  return (
+    <div className="news-paper-title">
+      <h1 style={titleStyle}> Past-o-rama's Tic Tac Toe</h1>
+    </div>
+  );
+}
+
+export { TicTacTitle };
+
+// tic tac toe page number 
+function TicTacToeFooter() {
+
+   const footerStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  };
+  
+  return (
+    <><div style ={footerStyle}>
+      <h3 style={{ textAlign: 'left' }}>
+        &copy; 3000 New New York News Paper
+      </h3>
+      
+      <h3 style={{ textAlign: 'right' }}>
+          Page 2
+      </h3>
+    </div></>
+  );
+}
+
+export { TicTacToeFooter };  
+
+
+
 // make square compoent remember it was clicked and put "x"
 // usestate to help it remember the value, and changes the click
 import { useState } from 'react';
@@ -252,12 +295,26 @@ function OtherStories() {
 export { OtherStories };
 
 
+
 // page numbers and copyright at the bottom of the paper
 function Footer() {
+
+   const footerStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  };
+  
   return (
-    <footer className="app-footer">
-      <p>Page 1 | &copy; 3000 New New York News Paper</p>
-    </footer>
+    <><div style ={footerStyle}>
+      <h3 style={{ textAlign: 'left' }}>
+        &copy; 3000 New New York News Paper
+      </h3>
+      
+      <h3 style={{ textAlign: 'right' }}>
+          Page 1
+      </h3>
+    </div></>
   );
 }
 
@@ -304,7 +361,9 @@ export default function App() {
       
       <HorizontalLine />
       <Footer />
+      <TicTacTitle />
       <Board />
+      <TicTacToeFooter />
     </>
   );
 }
