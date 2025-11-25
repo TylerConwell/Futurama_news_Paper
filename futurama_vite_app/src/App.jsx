@@ -80,18 +80,26 @@ function Board() {
 // -----------Futurama News Paper logic-----------------
 
 // date that is going to be shown on the paper on the top h2
-// made two react compinents that are for the left and right side
+// made a flexbox div to hold both lines of date on both ends
 function Date() {
+  // making a div to hold the date issue number and another for the full date
+  const containerStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  };
+  
   return (
-     <header className="app-date">
-      <div className= "issue-number">
-         <h2>Issue 39, News</h2>
-      </div>
-      <div className="date-number">
-         <h2>Monday, December 1, 3000</h2>
-      </div>
-    </header>
-  )
+    <><div style ={containerStyle}>
+      <h2 style={{ textAlign: 'left' }}>
+        Issue 39, News
+      </h2>
+      
+      <h2 style={{ textAlign: 'right' }}>
+          Monday, December 1, 3000
+      </h2>
+    </div></>
+  );
 }
 
 export { Date };
