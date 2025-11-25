@@ -2,7 +2,6 @@ import React from 'react';
 import coverImage from './futurama_couch.png';
 import sideImage from './futurama_fry_yelling.png';
 import secondaryImage from './futurama_seeing_up.png';
-// import './style.css';
 
 // -----------Tic Tac Toe logic-----------------
 
@@ -85,12 +84,13 @@ function Date() {
   return (
     <header className="app-date">
       <h2>Issue 39, News</h2>
-      <h2>November 1, 3000</h2>
+      <h2>Monday, December 1, 3000</h2>
     </header>
   )
 }
 
 export { Date };
+
 
 
 
@@ -243,19 +243,44 @@ export { Footer };
 
 
 
+// horizontal line separator
+function HorizontalLine() {
+  return (
+    <hr className="horizontal-line" />
+  );
+}
+
+export { HorizontalLine };
+
+
+
 // Default App: show the cover/main image above the board
 export default function App() {
   return (
     <>
+      <HorizontalLine />
       <Date />
+      <HorizontalLine />
+
       <Title />
-      <MainImage />
-      <MainArticleHeader />
-      <SideImage />
-      <SideImageParagraph />
-      <SecondaryImage />
-      <SecondaryImageParagraph />
+      <HorizontalLine />
+
+      <div className="articles-row">
+        <div className="article-main">
+          <MainImage />
+          <MainArticleHeader />
+        </div>
+        <div className="article-side">
+          <SideImage />
+          <SideImageParagraph />
+          <SecondaryImage />
+          <SecondaryImageParagraph />
+        </div>
+      </div>
+
       <OtherStories />
+      
+      <HorizontalLine />
       <Footer />
       <Board />
     </>
