@@ -80,11 +80,16 @@ function Board() {
 // -----------Futurama News Paper logic-----------------
 
 // date that is going to be shown on the paper on the top h2
+// made two react compinents that are for the left and right side
 function Date() {
   return (
-    <header className="app-date">
-      <h2>Issue 39, News</h2>
-      <h2>Monday, December 1, 3000</h2>
+     <header className="app-date">
+      <div className= "issue-number">
+         <h2>Issue 39, News</h2>
+      </div>
+      <div className="date-number">
+         <h2>Monday, December 1, 3000</h2>
+      </div>
     </header>
   )
 }
@@ -246,7 +251,7 @@ export { Footer };
 // horizontal line separator
 function HorizontalLine() {
   return (
-    <hr className="horizontal-line" />
+    <hr style={{ border: '1.5px solid black', margin: '20px 0' }} />
   );
 }
 
