@@ -108,11 +108,18 @@ export { Date };
 
 
 // title that is going to be shown on the paper on the top h1
+// div class for title styling in the center
 function Title() {
+  const titleStyle = {
+    textAlign: 'center',
+    fontSize: '90px',
+    fontWeight: 'bold',
+  };
+
   return (
-    <header className="app-header">
-      <h1>New New York News Paper</h1>
-    </header>
+    <div className="news-paper-title">
+      <h1 style={titleStyle}> New New York News Paper</h1>
+    </div>
   );
 }
 
@@ -142,8 +149,10 @@ export { MainImage };
 
 function MainArticleHeader() {
   return (
-    <div>
-      <h2>New New York News Paper Launches Today!</h2>
+    <div className="arcle-main-header">
+      <h2 style= {
+        {textAlign: 'center'}
+      }>New New York News Paper Launches Today!</h2>
     </div>
   );
 }
