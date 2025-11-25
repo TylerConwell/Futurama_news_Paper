@@ -125,6 +125,20 @@ export { MainImage };
 
 
 
+// main article header under main image
+
+function MainArticleHeader() {
+  return (
+    <div>
+      <h2>New New York News Paper Launches Today!</h2>
+    </div>
+  );
+}
+
+export { MainArticleHeader }; 
+
+
+
 // side image for first side article
 function SideImage() {
   return (
@@ -215,6 +229,20 @@ function OtherStories() {
 
 export { OtherStories };
 
+
+// page numbers and copyright at the bottom of the paper
+function Footer() {
+  return (
+    <footer className="app-footer">
+      <p>Page 1 | &copy; 3000 New New York News Paper</p>
+    </footer>
+  );
+}
+
+export { Footer };  
+
+
+
 // Default App: show the cover/main image above the board
 export default function App() {
   return (
@@ -222,11 +250,13 @@ export default function App() {
       <Date />
       <Title />
       <MainImage />
+      <MainArticleHeader />
       <SideImage />
       <SideImageParagraph />
       <SecondaryImage />
       <SecondaryImageParagraph />
       <OtherStories />
+      <Footer />
       <Board />
     </>
   );
