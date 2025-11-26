@@ -2,6 +2,7 @@ import React from 'react';
 import coverImage from './futurama_couch.png';
 import sideImage from './futurama_fry_yelling.png';
 import secondaryImage from './futurama_seeing_up.png';
+import './styles.css';
 
 // -----------Tic Tac Toe logic-----------------
 
@@ -174,13 +175,7 @@ export { Title };
 console.log(coverImage);
 function MainImage() {
   return (
-    <div className="w-full h-auto mt-2 mb-4 hd-border hd-shadow-custom bg-yellow-100 p-2">
-      <img
-        src={coverImage}
-        alt="Futurama News Paper Cover"
-        className="w-full h-auto object-cover hd-border"
-      />
-    </div>
+    <img src={coverImage} alt="Futurama News Paper Cover" className="MainImage coverImage"/>
   );
 }
 
