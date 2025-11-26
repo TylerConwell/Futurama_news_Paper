@@ -4,7 +4,7 @@ import sideImage from './futurama_fry_yelling.png';
 import secondaryImage from './futurama_seeing_up.png';
 import './styles.css';
 
-// -----------Tic Tac Toe logic-----------------
+// -----------tic tac toe game -----------------
 
 // title for the tic tac toe game
 function TicTacTitle() {
@@ -121,7 +121,7 @@ function Board() {
 
 
 
-// -----------Futurama News Paper logic-----------------
+// -----------futurama newspaper -----------------
 
 // date that is going to be shown on the paper on the top h2
 // made a flexbox div to hold both lines of date on both ends
@@ -200,15 +200,10 @@ export { MainArticleHeader };
 
 
 // side image for first side article
+console.log(sideImage);
 function SideImage() {
   return (
-    <div className="w-full h-auto mt-2 mb-4 hd-border hd-shadow-custom bg-yellow-100 p-2">
-      <img
-      src={sideImage}
-      alt="Futurama fry yelling Side Image"
-      className="w-full h-auto object-cover hd-border"
-      />
-    </div>
+   <img src={sideImage} alt="Futurama fry yelling" className= "SideImage sideImage"/>
   );
 }
 
@@ -237,15 +232,10 @@ export { SideImageParagraph };
 
 
 // secondary image for second side article
+console.log(secondaryImage);
 function SecondaryImage() {
   return (
-    <div className="w-full h-auto mt-2 mb-4 hd-border hd-shadow-custom bg-yellow-100 p-2">
-      <img
-      src={secondaryImage}
-      alt="Futurama fry Bender Secondary Image"
-      className="w-full h-auto object-cover hd-border"
-      />
-    </div>
+  <img src={secondaryImage} alt="Futurama seeing up" className="SecondaryImage sideImage"/>
   );
 }
 
@@ -261,10 +251,15 @@ function SecondaryImageParagraph() {
       
       <p className="hd-border hd-shadow-custom bg-yellow-100 p-2"> 
         The Planet Express delivery crew has reported a significant increase
-        in business, citing a surge in demand for intergalactic deliveries.
-        "It's been a wild ride," said Captain Zapp Brannigan. "But we're
-        ready for anything the universe throws at us." More details on page 8.
+        in business, citing a surge in demand for intergalactic deliveries. 
+        "We're seeing more packages than ever before," said Leela, the
+        ship's captain. "It's an exciting time for us!" More details on 
+        page 6.
       </p>
+
+      <p>Professor Farnsworth was seen saying "wernstrom" when asked about 
+         Professor Wernstroms sponssorship with Moms Robotics company for 
+         his competing robotic delivery company. More details on page 8.</p>
     </div>
   );
 }
@@ -281,7 +276,7 @@ function OtherStories() {
       <p className="hd-border hd-shadow-custom bg-yellow-100 p-2">
         - New Robot Law Passed in New New York<br/>
         - Alien Invasion Drill Scheduled for Next Week<br/>
-        - Local Cafe Introduces New Space-Themed Menu
+        - Local Handsome Robot Steals Hearts of Many, and Their Wallets
       </p>
     </div>
   );
@@ -357,7 +352,9 @@ export default function App() {
       <HorizontalLine />
       <Footer />
       <TicTacTitle />
+      <HorizontalLine />
       <Board />
+      <HorizontalLine />  
       <TicTacToeFooter />
     </>
   );
