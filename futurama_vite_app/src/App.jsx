@@ -39,7 +39,7 @@ function TicTacToeFooter() {
       </h3>
       
       <h3 style={{ textAlign: 'right' }}>
-          Page 2
+          Page 2 of 8
       </h3>
     </div></>
   );
@@ -132,7 +132,8 @@ function Date() {
     justifyContent: 'space-between',
     flexDirection: 'row',
   };
-  
+
+  // first h2 left aligned, second h2 right aligned
   return (
     <><div style ={containerStyle}>
       <h2 style={{ textAlign: 'left' }}>
@@ -147,7 +148,6 @@ function Date() {
 }
 
 export { Date };
-
 
 
 
@@ -302,7 +302,7 @@ function Footer() {
       </h3>
       
       <h3 style={{ textAlign: 'right' }}>
-          Page 1
+          Page 1 of 8
       </h3>
     </div></>
   );
@@ -351,6 +351,7 @@ export default function App() {
       
       <HorizontalLine />
       <Footer />
+      
       <TicTacTitle />
       <HorizontalLine />
       <Board />
