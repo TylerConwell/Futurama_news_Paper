@@ -3,6 +3,9 @@ import coverImage from './futurama_couch.png';
 import sideImage from './futurama_fry_yelling.png';
 import secondaryImage from './futurama_seeing_up.png';
 import './styles.css';
+// make square compoent remember it was clicked and put "x"
+// usestate to help it remember the value, and changes the click
+import { useState } from 'react';
 
 // -----------tic tac toe game -----------------
 
@@ -23,7 +26,10 @@ function TicTacTitle() {
 
 export { TicTacTitle };
 
-// tic tac toe page number 
+
+
+
+// tic tac toe page number & footer
 function TicTacToeFooter() {
 
    const footerStyle = {
@@ -49,9 +55,6 @@ export { TicTacToeFooter };
 
 
 
-// make square compoent remember it was clicked and put "x"
-// usestate to help it remember the value, and changes the click
-import { useState } from 'react';
 
 // indicares square component can be passed a property called value
 // new step: receive value prop from board component
@@ -163,6 +166,7 @@ function Title() {
   return (
     <div className="news-paper-title">
       <h1 style={titleStyle}> New New York News Paper</h1>
+      
     </div>
   );
 }
@@ -191,6 +195,7 @@ function MainArticleHeader() {
       <h2 style= {
         {textAlign: 'center'}
       }>New New York News Paper Launches Today!</h2>
+      <br />
     </div>
   );
 }
