@@ -107,7 +107,7 @@ function Board() {
       nextSquares[i] = 'O';
     }
     setSquares(nextSquares);
-    setSquares(!xIsNext); // if not x then its o
+    setXIsNext(!xIsNext); // if not x then its o
   }
   // not adding the i arguement and not just the hardcoded 0
   
