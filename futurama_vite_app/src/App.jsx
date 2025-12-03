@@ -94,7 +94,7 @@ function Board() {
   // to 'X', and calls setSquares to update state, re-rending the comp in square/board comp 
   function handleClick(i) {
     // make sure x and o is not over written
-    if(squares[i]) {
+    if(squares[i] || calculateWinner(squares)) {
       return;
     }
 
@@ -111,8 +111,26 @@ function Board() {
   }
   // not adding the i arguement and not just the hardcoded 0
   
+
+
+  //show when the winner is made and display it
+  const winner = calculateWinner(squares);
+  let status;
+  if (winner) {
+    status = 'Winner: ' + winner;
+  } 
+  
+  else {
+    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+  }
+
+
+
+
   return (
     <>
+      <div className="status">{status}</div>
+      
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
         <Square value={squares[1]} onSquareClick={() => handleClick(1)}/>
