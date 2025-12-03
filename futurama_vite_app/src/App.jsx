@@ -74,7 +74,7 @@ function Square({value, onSquareClick}) {
 
 
 // making a square button component, default is main function in file
-function Board() {
+export default function Board() {
   // returning jsx for tic tac toe board and numbering the buttons 1-9
   // square component maintains part of game state itself
   // state handeling is in the board comp. pass props to child square display right.
@@ -192,9 +192,12 @@ export { MainImage };
 function MainArticleHeader() {
   return (
     <div className="arcle-main-header">
+      <br />
+
       <h2 style= {
         {textAlign: 'center'}
       }>New New York News Paper Launches Today!</h2>
+
       <br />
     </div>
   );
@@ -326,6 +329,23 @@ function HorizontalLine() {
 
 export { HorizontalLine };
 
+// horizontal line separator for tic tac toe section that is margin down
+function HorizontalLineNew() {
+  return (
+    <div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr style={{ border: '1.5px solid black', margin: '40px 0 20px 0' }} />
+    </div>
+  );
+}
+
+export { HorizontalLineNew };
+
 
 
 // Default App: show the cover/main image above the board
@@ -357,6 +377,7 @@ export default function App() {
       <HorizontalLine />
       <Footer />
       
+      <HorizontalLineNew />
       <TicTacTitle />
       <HorizontalLine />
       <Board />
