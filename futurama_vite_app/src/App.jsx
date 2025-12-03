@@ -74,10 +74,15 @@ function Square({value, onSquareClick}) {
 
 
 // making a square button component, default is main function in file
-export default function Board() {
+function Board() {
   // returning jsx for tic tac toe board and numbering the buttons 1-9
   // square component maintains part of game state itself
   // state handeling is in the board comp. pass props to child square display right.
+
+  const[xIsNext, setXIsNext] = useState (true);
+  // first move is always x by default, xisnext is a bool
+
+
 
   // tell each square what to display by passing a prop
   // usestate declare squares state variable to store array of 9 squares
@@ -88,9 +93,21 @@ export default function Board() {
   // creates a copy of squares array, updates first element (nextsquare)
   // to 'X', and calls setSquares to update state, re-rending the comp in square/board comp 
   function handleClick(i) {
+    // make sure x and o is not over written
+    if(squares[i]) {
+      return;
+    }
+
     const nextSquares = squares.slice();
-    nextSquares[i] = 'X';
+    if(xIsNext) {
+      nextSquares[i] = 'X';
+    }
+
+    else {
+      nextSquares[i] = 'O';
+    }
     setSquares(nextSquares);
+    setSquares(!xIsNext); // if not x then its o
   }
   // not adding the i arguement and not just the hardcoded 0
   
@@ -328,6 +345,8 @@ function HorizontalLine() {
 }
 
 export { HorizontalLine };
+
+
 
 // horizontal line separator for tic tac toe section that is margin down
 function HorizontalLineNew() {
