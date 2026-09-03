@@ -2,7 +2,7 @@
 
 This is a simple website that is designed parody the New New York Express newspaper from the hit tv show Futurama.
 
-Description
+Description <br>
 
 This is a parody website about Futurama's in-universe newspaper. I thought that it would be fun to make a project that has a clever spin on how the normal citizens view the Planet Express crew. Without all the wacky plots, they probably just seem like a local small business, with all our lovable cast of zany characters! 
 
